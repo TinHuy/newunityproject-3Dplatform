@@ -17,10 +17,9 @@ public class CharacterController : MonoBehaviour
     public LayerMask GroundLayer;
     public float jumpForce = 300.0f;
 
-    public float normalSpeed = 10.0f;
-    public float SprintSpeed = 20.0f;
+    public float normalSpeed = 10f;
+    public float sprintSpeed = 20f;
 
-    public float masSprint = 5.0f;
     float sprintTimer;
 
     // Start is called before the first frame update
@@ -47,7 +46,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) && sprintTimer > 0.0f)
         {
-            maxSpeed = SprintSpeed;
+            maxSpeed = sprintSpeed;
             sprintTimer = sprintTimer - Time.deltaTime;
         } else
         {
@@ -55,12 +54,12 @@ public class CharacterController : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift) == false)  {
                 sprintTimer = sprintTimer + Time.deltaTime;
             }
+
+            if (sprintTimer > 5.0f)
+            {
+                sprintTimer = 5.0f;
+            }
         }
-
-        sprintTimer = Mathf.Clamp(sprintTimer, 0.0f, masSprint);
-
-        transform.position = transform.position + (transform.forward * Input.GetAxis("Vertical"));
-        transform.position = transform.position + (transform.right * Input.GetAxis("Horizontal"));
 
         Vector3 newVelocity = transform.forward * Input.GetAxis("Vertical") * maxSpeed + (transform.right * Input.GetAxis("Horizontal") * maxSpeed);
         myRigidbody.velocity = new Vector3(newVelocity.x, myRigidbody.velocity.y, newVelocity.z);
