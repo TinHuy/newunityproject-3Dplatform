@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -207,7 +207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114052599}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.189999, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: 4.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244219757}
@@ -243,9 +243,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOpen: 0
-  door: {fileID: 0}
-  startingPoint: {fileID: 0}
-  endingPoint: {fileID: 0}
+  door: {fileID: 1550990075}
+  startingPoint: {fileID: 3057748}
+  endingPoint: {fileID: 114052600}
 --- !u!4 &244219757
 Transform:
   m_ObjectHideFlags: 0
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 568905147}
   - component: {fileID: 568905150}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Cube
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 568905145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d9ba9ff1f8752f44953624cea5c9f59, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bf7af393cf425145a404be60068adeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &705507993
@@ -447,7 +447,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &705507995
@@ -1017,7 +1016,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202077629}
   m_LocalRotation: {x: -0, y: 0.69855934, z: -0, w: 0.7155522}
-  m_LocalPosition: {x: -9.467332, y: -44.6, z: 17.774939}
+  m_LocalPosition: {x: -9.467332, y: -77.8, z: 17.774939}
   m_LocalScale: {x: 70.99712, y: 70.99712, z: 500.8847}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1366,7 +1365,7 @@ MonoBehaviour:
   myPlatform: {fileID: 568905146}
   myStartPoint: {fileID: 1069018045}
   myEndPoint: {fileID: 36263381}
-  speed: 0
+  speed: 0.0075
 --- !u!4 &1619941481
 Transform:
   m_ObjectHideFlags: 0
@@ -1400,7 +1399,7 @@ GameObject:
   - component: {fileID: 1650962944}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

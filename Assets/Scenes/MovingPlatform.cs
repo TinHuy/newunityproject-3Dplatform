@@ -32,7 +32,7 @@ public class MovingPlatform : MonoBehaviour
         }
         else
         {
-            myPlatform.position = Vector3.MoveTowards(myPlatform.position, myEndPoint.position, speed);
+            myPlatform.position = Vector3.MoveTowards(myPlatform.position, myStartPoint.position, speed);
 
             if (myPlatform.position == myStartPoint.position)
             {
