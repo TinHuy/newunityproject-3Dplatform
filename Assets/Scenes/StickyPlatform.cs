@@ -10,7 +10,6 @@ public class StickyPlatform : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.transform.parent = transform;
-            collision.transform.localScale = new Vector3(1f, 1f, 1f);
         }
     }
 
